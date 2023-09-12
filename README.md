@@ -30,3 +30,6 @@ Create a function `add` that takes a `String` and returns a `String`:
 >* Allow the Add method to handle new lines between numbers (instead of commas).
 >* the following input is ok: "1\n2,4" (will equal 7)
 >* the following input is NOT ok: "1,\n" (not need to prove it - just clarifying)
+
+## Fourth step
+> Hidden functionality
