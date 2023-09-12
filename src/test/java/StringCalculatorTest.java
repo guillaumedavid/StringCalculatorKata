@@ -73,7 +73,7 @@ public class StringCalculatorTest {
         return Stream.of(
                 Arguments.of("624,20","1288"),
                 Arguments.of("700","1400"),
-                Arguments.of("711,10000","21422")
+                Arguments.of("711,500","2422")
 
         );
     }
@@ -96,6 +96,16 @@ public class StringCalculatorTest {
         String result = StringCalculator.sum(input);
         //THEN
         Assertions.assertThat(result).isEqualTo("7");
+    }
+
+    @Test
+    void shouldIgnoreNumbersBiggerThan1000() {
+        //GIVEN
+        String input = "2,1001";
+        //WHEN
+        String result = StringCalculator.sum(input);
+        //THEN
+        Assertions.assertThat(result).isEqualTo("2");
     }
 
 }

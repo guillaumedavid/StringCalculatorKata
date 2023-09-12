@@ -9,6 +9,7 @@ public class StringCalculator {
         }
         BigDecimal normalSum = Arrays.stream(input.split(",|\n"))
                 .map(BigDecimal::new)
+                .filter(bigDecimal -> bigDecimal.intValue() <=1000)
                 .reduce(BigDecimal::add)
                 .get();
 

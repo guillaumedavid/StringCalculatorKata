@@ -32,4 +32,4 @@ Create a function `add` that takes a `String` and returns a `String`:
 >* the following input is NOT ok: "1,\n" (not need to prove it - just clarifying)
 
 ## Fourth step
-> Hidden functionality
+>* Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
