@@ -13,3 +13,10 @@ Create a function `add` that takes a `String` and returns a `String`:
 >* An empty string will return "0".
 >* Example of inputs: `""`, `"1"`,`"1,2"`, `"1.1,2.2"`.
 
+## Second step
+
+>* If the result end by "6" add 3000
+>* Example : Input = `"142","34"` => output = `"3176"`
+>* If the last 2 digits of the result are the same, multiple the result by 2
+>* Example : Input =  `"624","20"` => output = `"1288"`
+
