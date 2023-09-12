@@ -28,5 +28,5 @@ Create a function `add` that takes a `String` and returns a `String`:
 > Allow the add method to handle newlines as separators:
 
 >* Allow the Add method to handle new lines between numbers (instead of commas).
->* the following input is ok: "1\n2,3" (will equal 6)
+>* the following input is ok: "1\n2,4" (will equal 7)
 >* the following input is NOT ok: "1,\n" (not need to prove it - just clarifying)
