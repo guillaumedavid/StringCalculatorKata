@@ -18,5 +18,8 @@ Create a function `add` that takes a `String` and returns a `String`:
 >* If the result end by "6" add 3000
 >* Example : Input = `"142","34"` => output = `"3176"`
 >* If the last 2 digits of the result are the same, multiple the result by 2
->* Example : Input =  `"624","20"` => output = `"1288"`
+>* Examples : 
+>* * Input =  `"624","20"` => output = `"1288"`
+>* * Input =  `"700"` => output = `"1400"`
+>* * Input =  `"711","10000"` => output = `"21422"`
 
