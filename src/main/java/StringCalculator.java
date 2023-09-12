@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.math.BigDecimal;
 import java.util.Arrays;
 
@@ -8,7 +7,7 @@ public class StringCalculator {
         if (input.isEmpty()) {
             return "0";
         }
-        BigDecimal normalSum = Arrays.stream(input.split(","))
+        BigDecimal normalSum = Arrays.stream(input.split(",|\n"))
                 .map(BigDecimal::new)
                 .reduce(BigDecimal::add)
                 .get();

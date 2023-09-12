@@ -88,4 +88,14 @@ public class StringCalculatorTest {
         Assertions.assertThat(result).isEqualTo("7332");
     }
 
+    @Test
+    void shouldAcceptNewlineSeparator() {
+        //GIVEN
+        String input = "1\n2,4";
+        //WHEN
+        String result = StringCalculator.sum(input);
+        //THEN
+        Assertions.assertThat(result).isEqualTo("7");
+    }
+
 }
