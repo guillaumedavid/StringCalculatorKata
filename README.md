@@ -5,9 +5,9 @@ It is a good exercise on refactoring and incremental implementation. It is also 
 
 ## First step 
 
-Create a function `add` that takes a `String` and returns a `String`:
+Create a function `sum` that takes a `String` and returns a `String`:
 
-    String add(String number)
+    String sum(String number)
 
 >* The method can take 0, 1 or 2 numbers separated by comma, and returns their sum.
 >* An empty string will return "0".
@@ -25,11 +25,17 @@ Create a function `add` that takes a `String` and returns a `String`:
 
 ## Third step
 
-> Allow the add method to handle newlines as separators:
+>* Allow the sum method to handle new lines between numbers (instead of commas).
 
->* Allow the Add method to handle new lines between numbers (instead of commas).
 >* the following input is ok: "1\n2,4" (will equal 7)
 >* the following input is NOT ok: "1,\n" (not need to prove it - just clarifying)
 
 ## Fourth step
 >* Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
+
+## Sixth step (fifth step omitted)
+
+>* Calling sum with negative numbers will return the message "Negative not allowed : " listing all negative numbers that were in the list of numbers.
+
+>* "-1,2" is invalid and should return the message "Negative not allowed : -1"
+>* "2,-4,-5" is invalid and should return the message "Negative not allowed : -4, -5"
