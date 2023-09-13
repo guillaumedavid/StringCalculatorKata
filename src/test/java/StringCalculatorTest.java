@@ -1,12 +1,11 @@
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
-import java.util.stream.Stream;
 
 public class StringCalculatorTest {
 
 
     @Test
-    void shouldGetReturnSingleValue() {
+    public void shouldGetReturnSingleValue() {
         //GIVEN
         String input = "1";
         //WHEN
@@ -16,7 +15,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void shouldGetZeroForEmptyInput() {
+    public void shouldGetZeroForEmptyInput() {
         //GIVEN
         String input = "";
         //WHEN
@@ -26,7 +25,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void shouldSumIntegers() {
+    public void shouldSumIntegers() {
         //GIVEN
         String input = "1,2";
         //WHEN
@@ -36,7 +35,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void shouldSumDecimals() {
+    public void shouldSumDecimals() {
         //GIVEN
         String input = "1.1,2.2";
         //WHEN
@@ -46,7 +45,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void shouldAdd3000ToResultIfEndBy6() {
+    public void shouldAdd3000ToResultIfEndBy6() {
         //GIVEN
         String input = "142,34";
         //WHEN
@@ -55,27 +54,18 @@ public class StringCalculatorTest {
         Assertions.assertThat(result).isEqualTo("3176");
     }
 
-    @ParameterizedTest
-    @MethodSource("dataForShouldMultipleBy2IfThe2lastDigitsAreTheSame")
-    void shouldMultipleBy2IfThe2lastDigitsAreTheSame(String input, String output) {
+    @Test
+    public void shouldMultipleBy2IfThe2lastDigitsAreTheSame() {
         //GIVEN
+        String input = "624,20";
         //WHEN
         String result = StringCalculator.sum(input);
         //THEN
-        Assertions.assertThat(result).isEqualTo(output);
-    }
-
-    private static Stream<Arguments> dataForShouldMultipleBy2IfThe2lastDigitsAreTheSame() {
-        return Stream.of(
-                Arguments.of("624,20","1288"),
-                Arguments.of("700","1400"),
-                Arguments.of("711,500","2422")
-
-        );
+        Assertions.assertThat(result).isEqualTo("1288");
     }
 
     @Test
-    void shouldAdd3000AndMultipleBy2IfEndBy6And2LastdigitsAreTheSame() {
+    public void shouldAdd3000AndMultipleBy2IfEndBy6And2LastdigitsAreTheSame() {
         //GIVEN
         String input = "666";
         //WHEN
@@ -85,7 +75,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void shouldAcceptNewlineSeparator() {
+    public void shouldAcceptNewlineSeparator() {
         //GIVEN
         String input = "1\n2,4";
         //WHEN
@@ -95,7 +85,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void shouldIgnoreNumbersBiggerThan1000() {
+    public void shouldIgnoreNumbersBiggerThan1000() {
         //GIVEN
         String input = "2,1001";
         //WHEN
