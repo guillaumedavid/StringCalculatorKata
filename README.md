@@ -33,3 +33,6 @@ Create a function `add` that takes a `String` and returns a `String`:
 
 ## Fourth step
 >* Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
+
+## Fifth step
+>* Refacto time : Java7 only :(
