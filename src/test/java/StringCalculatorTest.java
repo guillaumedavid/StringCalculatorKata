@@ -108,4 +108,24 @@ public class StringCalculatorTest {
         Assertions.assertThat(result).isEqualTo("2");
     }
 
+    @Test
+    void shouldreturnErrorMessageWithOneNegativeNumber() {
+        //GIVEN
+        String input = "-1,2";
+        //WHEN
+        String result = StringCalculator.sum(input);
+        //THEN
+        Assertions.assertThat(result).isEqualTo("Negative not allowed : -1");
+    }
+
+    @Test
+    void shouldreturnErrorMessageWithTwoNegativeNumbers() {
+        //GIVEN
+        String input = "2,-4,-5";
+        //WHEN
+        String result = StringCalculator.sum(input);
+        //THEN
+        Assertions.assertThat(result).isEqualTo("Negative not allowed : -4, -5");
+    }
+
 }
