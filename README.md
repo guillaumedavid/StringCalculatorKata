@@ -5,9 +5,9 @@ It is a good exercise on refactoring and incremental implementation. It is also 
 
 ## First step 
 
-Create a function `add` that takes a `String` and returns a `String`:
+Create a function `sum` that takes a `String` and returns a `String`:
 
-    String add(String number)
+    String sum(String number)
 
 >* The method can take 0, 1 or 2 numbers separated by comma, and returns their sum.
 >* An empty string will return "0".
